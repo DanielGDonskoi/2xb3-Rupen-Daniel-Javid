@@ -1,15 +1,12 @@
+def are_valid_groups(students, groups):
+        for group in groups:
+                for student in group:
+                        if student in students:
+                                students.remove(student)
+        if not students:
+                return True
+        else:
+                return False
 
-def are_valid_groups(studNums, groups):
-        inGroup = False
-        for num in studNums:
-                for group in groups:
-                        if (num in group):
-                                inGroup = True
-                                break
-                        else:
-                                inGroup = False
-		
-                if (inGroup):
-                        return True
-                else:
-                        return
+#rip daniels code
+#rip rupens code
