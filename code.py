@@ -7,3 +7,5 @@ def are_valid_groups(students, groups):
                 return True
         else:
                 return False
+
+#rip daniels code
