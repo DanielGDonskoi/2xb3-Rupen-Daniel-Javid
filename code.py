@@ -1,7 +1,7 @@
 
-def are_valid_groups(studNums, groups):
+def are_valid_groups(studNum, groups):
         inGroup = False
-        for num in studNums:
+        for num in studNum:
                 for group in groups:
                         if (num in group):
                                 inGroup = True
