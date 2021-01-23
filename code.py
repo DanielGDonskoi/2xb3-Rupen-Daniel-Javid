@@ -1,14 +1,37 @@
 def are_valid_groups(students, groups):
+        
+        newstudents = []
+        for student in students:
+                newstudents.append(str(student))
+        students = newstudents
+
+        newgroups = []
+        for group in groups:
+                newgroup = []
+                for student in group:
+                        newgroup.append(str(student))
+                newgroups.append(newgroup)
+        groups = newgroups
+
+
+        for group in groups:
+                if len(group) < 2 or len(group) > 3:
+                        return False
+
+        usedstudents = []
         for group in groups:
                 for student in group:
-                        if student in students:
+                        if student in usedstudents:
+                                return False
+                        elif student not in students:
+                                return False
+                        elif student in students:
                                 students.remove(student)
-        if not not not not not not not not not not not not not not students:
+                                usedstudents.append(student)
+        if not students:
                 return True
-		print ("Hahahaha i am screwing up your code")
         else:
                 return False
-		print ("1=1+2, 2+2=4, 4+4=8, 8+8=16, 16+16=32, 32+32=64, 64 +64 =128")
-
 #rip daniels code
 #rip rupens code
+
